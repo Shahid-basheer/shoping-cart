@@ -1,0 +1,41 @@
+<body>
+  <div class="container mt-5 pt-5">
+{{#if products}}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">OrderId</th>
+      <th scope="col">Status</th>
+      <th scope="col">Payment</th>
+      <th scope="col">Total</th>
+      <th scope="col">Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+      
+   
+    
+     
+      {{#each products}}
+     <tr>
+     <td>1</td>
+      <td>{{this.date}}</td>
+       <td>{{this._id}}</td>
+      <td>{{this.status}}</td>
+      <td>{{this.paymentMethod}}</td>
+      <td>{{this.total}}</td>
+     <td><a href="/view-oders/{{this._id}}" class="btn btn-primary">View products</a></td>
+    </tr>
+      {{/each}}
+  </tbody>
+</table>
+{{else}}
+<p>no yet orders</p>
+{{/if}}
+</div>
+</body>
+

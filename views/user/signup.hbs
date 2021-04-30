@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
 </head>
 
 <body
@@ -14,38 +15,41 @@
 
     
 
-<form action="/signup" method="POST">
+<form id="signup-form" action="/signup" method="POST">
     <div class="signup-form">
         <h1>signup-form</h1>
-        <div >
+        {{#if response}}
+         <h4 id="logged" style=" color: red;">Account already taked</h4>
+        {{else}}
+        
+         {{/if}}
+        
+        <div>
     <label for="exampleInputEmail1" class="form-label">First Name</label>
-    <input type="text" name="fname" placeholder="First Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    <input type="text" id="fname" name="fname" placeholder="First Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div >
     <label for="exampleInputEmail1" class="form-label">Last Name</label>
-    <input type="text" name="lname" placeholder="Last Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
+    <input type="text" id="lname" name="lname" placeholder="Last Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text"></div>
   </div>
 
   <div >
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" placeholder="Email address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
+    <input type="email" id="email" name="email" placeholder="Email address" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
     <div id="emailHelp" class="form-text"></div>
   </div>
 
   <div >
     <label for="exampleInputEmail1" class="form-label">Password</label>
-    <input type="password" name="password" placeholder="Password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"required>
+    <input type="password" id="password" name="password" placeholder="Password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Phone</label>
-    <input type="number" name="phone" placeholder="Phone" class="form-control" id="exampleInputPassword1"required>
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" placeholder="Email address" class="form-check-input" id="exampleCheck1"required>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <input type="text" id="phone" name="phone" value="91" placeholder="Phone" class="form-control" id="exampleInputPassword1" >
+    <input type="text" name="channel" value="sms" hidden>
   </div>
   <button type="submit" class="btn btn-primary ">Submit</button>
   </div>
@@ -53,20 +57,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script>
+  
+</script>
 
 
 </body>

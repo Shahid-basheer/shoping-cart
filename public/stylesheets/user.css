@@ -1,0 +1,740 @@
+body {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+}
+
+/* Nave bar start !!!! */
+
+.navbar {
+  background-color: rgba(248, 143, 4, 0.87);
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  z-index: 1;
+  bottom: 87%;
+  top: 0;
+}
+
+#account {
+  position: relative;
+  left: 510%;
+  top: -80px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  color: rgb(10, 10, 10);
+}
+
+/*Start user navbar .....................................................*/
+
+.span-navbar {
+  color: whitesmoke;
+  font-size: 40px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+#input {
+  position: fixed;
+  left: 500px;
+  bottom: 90%;
+  border: none;
+  border-radius: 10px 10px 10px;
+  outline: none;
+  padding: 10px 10px;
+  width: 40%;
+  font-size: 20px;
+
+  top: 50px;
+}
+
+.cart-icon {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  left: 80%;
+  bottom: 80%;
+  font-size: 25px;
+}
+
+button {
+  border: 3px solid rgb(218, 30, 30);
+}
+
+#btn-logout {
+  display: block;
+  position: fixed;
+  left: 90%;
+  bottom: 89%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.row {
+  position: relative;
+  top: 150px;
+}
+
+#search-icon {
+  position: absolute;
+  left: 1220px;
+  top: 61px;
+  font-size: 25px;
+}
+/*end user navbar .....................................................*/
+
+/*Start header.....................................................*/
+
+/*pop window start*/
+#cart {
+  position: absolute;
+  left: 1300px;
+  top: 50px;
+}
+
+#cart:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.cart:hover {
+  cursor: pointer;
+  color: rgb(60, 221, 101);
+}
+.popup {
+  width: 600px;
+  height: 650%;
+  background-color: rgb(249, 249, 249);
+  position: absolute;
+  right: 0;
+  display: none;
+  border: solid 5px rgb(238, 217, 217);
+  overflow-y: auto;
+}
+
+/*pop window end*/
+
+.div-cart {
+  display: inline;
+  position: relative;
+  left: 40px;
+  top: 60px;
+  width: 300px;
+  height: 400px;
+  background-color: rgb(248, 241, 241);
+}
+
+img {
+  width: 301px;
+  height: 272px;
+}
+
+.div-cart p {
+  text-align: center;
+}
+
+.signup-form {
+  margin-left: 600px;
+  margin-top: 200px;
+  width: 700px;
+}
+
+.error{
+  color: red;
+  font-size: 20px;
+}
+
+.signup-form input {
+  border-radius: 20px 20px 20px;
+  outline: none;
+  border: none;
+}
+
+.signup-form h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  text-align: center;
+}
+
+.signup-form button {
+  position: relative;
+  left: 250px;
+  width: 200px;
+}
+
+.user-login {
+  width: 500px;
+  height: 500px;
+  margin-left: 700px;
+  margin-top: 200px;
+}
+
+.btn-user {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  top: 10px;
+  left: 150px;
+}
+
+.user-login a {
+  position: relative;
+  top: 30px;
+}
+
+.user-login h1 {
+  position: relative;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: inline-block;
+  position: relative;
+  top: 8rem;
+}
+.container-css {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*End users header.....................................................*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
+/* *{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+  } */
+body {
+  font-family: "Roboto", sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all 0.5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+.sidebar ul a i {
+  margin-right: 16px;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancel {
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+#check:checked ~ section {
+  margin-left: 250px;
+}
+section {
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+.full {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/*.....................Media query.................................*/
+
+/*mobile device 
+***********************************************
+*/
+
+@media (max-width: 530px) {
+  .navbar {
+    top: 0;
+    height: 100px;
+  }
+  .full {
+    display: block;
+  }
+
+  .btn-drop{
+    display: none;
+  }
+  .user-login {
+    width: 80%;
+    height: 1000px;
+    margin-left: 5%;
+    margin-top: 100px;
+  }
+
+  .btn-user {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 18%;
+  }
+
+  .user-login a {
+    position: relative;
+    top: 30px;
+  }
+
+  .user-login h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .signup-form {
+    margin-left: 30px;
+    margin-top: 100px;
+    width: 75%;
+  }
+
+  .signup input {
+    border-radius: 20px 20px 20px;
+    padding-top: 0;
+    outline: none;
+    border: none;
+  }
+
+  .signup-form button {
+    position: relative;
+    left: 70px;
+    width: 70%;
+  }
+
+  .span-navbar {
+    font-size: 25px;
+    margin-top: 18px;
+    margin-left: 180px;
+  }
+  #input {
+    position: fixed;
+    left: 119px;
+    bottom: 90%;
+    border: none;
+    border-radius: 10px 10px 10px;
+    outline: none;
+    padding: 10px 10px;
+    width: 200px;
+    font-size: 20px;
+    top: 31px;
+    height: 37px;
+  }
+
+  #cart {
+    position: absolute;
+    left: 334px;
+    top: 36px;
+  }
+  #search-icon {
+    position: absolute;
+    left: 288px;
+    top: 37px;
+    font-size: 25px;
+  }
+  .popup {
+    width: 405px;
+    height: 650%;
+    background-color: rgb(249, 249, 249);
+    position: absolute;
+    right: 0;
+    display: none;
+    border: solid 5px rgb(238, 217, 217);
+    top: 129px;
+}
+  #btn-logout {
+    display: none;
+  }
+  label #btn {
+    left: 13px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 4px 12px;
+    transition: all 0.5s;
+  }
+}
+
+/*tab device 
+    ***********************************************
+    */
+@media (min-width: 530px) and (max-width: 872px) {
+  .navbar {
+    top: 0;
+  }
+
+  .btn-drop{
+    display: none;
+  }
+
+  .card-boo {
+    width: 10px;
+    height: 10px;
+  }
+  .user-login {
+    width: 400px;
+    height: 500px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+
+  .btn-user {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 15%;
+  }
+
+  .user-login a {
+    position: relative;
+    top: 30px;
+  }
+
+  .user-login h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .signup-form {
+    margin-left: 70px;
+    margin-top: 100px;
+    width: 75%;
+  }
+
+  .signup input {
+    border-radius: 20px 20px 20px;
+    padding-top: 0;
+    outline: none;
+    border: none;
+  }
+
+  .signup-form button {
+    position: relative;
+    left: 30%;
+    width: 250px;
+  }
+
+  .span-navbar {
+    font-size: 25px;
+    padding: 0;
+    margin-left: 200px;
+    margin-top: 70px;
+  }
+
+  .full {
+    display: block;
+  }
+
+  .navbar {
+    background-color: rgb(121, 235, 14);
+  }
+
+  #input {
+    position: fixed;
+    left: 256px;
+    bottom: 90%;
+    border: none;
+    border-radius: 22px 21px 21px;
+    outline: none;
+    padding: 10px 10px;
+    width: 259px;
+    font-size: 20px;
+    top: 50px;
+  }
+
+  .span-navbar {
+    font-size: 38px;
+    margin-left: 20px;
+  }
+
+  #search-icon {
+    position: absolute;
+    left: 480px;
+    top: 61px;
+    font-size: 25px;
+  }
+  #btn-logout {
+    display: none;
+  }
+
+  #cart {
+    position: absolute;
+    left: 470px;
+    top: 10px;
+}
+}
+
+/*mediam device 
+    ***********************************************
+    */
+@media (min-width: 872px) and (max-width: 1400px) {
+  .navbar {
+    top: 0;
+  }
+
+  .user-login {
+    width: 80%;
+    height: 500px;
+    margin-left: 5%;
+    margin-top: 100px;
+  }
+
+  .user-login a {
+    position: relative;
+    top: 30px;
+  }
+
+  .user-login h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .btn-user {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 40%;
+  }
+
+  .signup-form {
+    margin-left: 100px;
+    margin-top: 150px;
+    width: 75%;
+  }
+
+  .signup input {
+    border-radius: 20px 20px 20px;
+    padding-top: 0;
+    outline: none;
+    border: none;
+  }
+
+  .signup-form button {
+    position: relative;
+    left: 30%;
+    width: 250px;
+  }
+
+  .span-navbar {
+    font-size: 25px;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  .navbar {
+    background-color: red;
+  }
+  #input {
+    position: absolute;
+    left: 291px;
+    top: 32px;
+    border: none;
+    border-radius: 20px 20px 20px;
+    outline: none;
+    padding: 5px 5px;
+    width: 437px;
+    font-size: 15px;
+  }
+  #search-icon {
+    position: absolute;
+    left: 693px;
+    top: 61px;
+    font-size: 25px;
+  }
+
+  #cart {
+    position: absolute;
+    left: 830px;
+    top: 59px;
+  }
+
+  #account {
+    top: 30px;
+  }
+  #btn-logout {
+    display: none;
+  }
+}
+
+/*large device 
+    ***********************************************
+    */
+
+@media (min-width: 1400px) and (max-width: 1800px) {
+  .navbar {
+    top: 0;
+  }
+
+  .user-login {
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    margin-top: 100px;
+  }
+
+  .user-login a {
+    position: relative;
+    top: 30px;
+  }
+
+  .user-login h1 {
+    position: relative;
+    text-align: center;
+  }
+
+  .btn-user {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    top: 10px;
+    left: 40%;
+  }
+
+  .signup-form {
+    margin-left: 150px;
+    margin-top: 150px;
+    width: 75%;
+  }
+
+  .signup input {
+    border-radius: 20px 20px 20px;
+    padding-top: 0;
+    outline: none;
+    border: none;
+  }
+
+  .signup-form button {
+    position: relative;
+    left: 40%;
+    width: 250px;
+  }
+
+  .span-navbar {
+    font-size: 25px;
+    padding: 0;
+    margin-left: 10px;
+  }
+
+  .navbar {
+    background-color: rgb(255, 7, 201);
+  }
+  .box input {
+    position: absolute;
+    left: 150px;
+    bottom: 27%;
+    border: none;
+    border-radius: 20px 20px 20px;
+    outline: none;
+    padding: 5px 5px;
+    width: 700px;
+    font-size: 15px;
+  }
+  #search-icon {
+    position: absolute;
+    left: 840px;
+    top: 61px;
+    font-size: 25px;
+  }
+
+  #cart {
+    position: absolute;
+    left: 1100px;
+    top: 94px;
+  }
+
+  #account {
+    top: 28px;
+    left: 1250px;
+  }
+  #btn-logout {
+    display: none;
+  }
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.row {
+  display: inline-block;
+  position: relative;
+  margin-left: 15px;
+}

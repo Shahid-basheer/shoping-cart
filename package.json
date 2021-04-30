@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-beta2",
     "cookie-parser": "~1.4.4",
     "date": "^1.0.2",
@@ -14,11 +16,16 @@
     "express": "~4.16.1",
     "express-fileupload": "^1.2.1",
     "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
     "hbs": "^4.1.1",
     "http-errors": "~1.6.3",
     "mongodb": "^3.6.4",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.7",
-    "upto": "0.0.6"
+    "parser": "^0.1.4",
+    "razorpay": "^2.0.6",
+    "twilio": "^3.57.0",
+    "upto": "0.0.6",
+    "uptodate": "^1.0.2"
   }
 }

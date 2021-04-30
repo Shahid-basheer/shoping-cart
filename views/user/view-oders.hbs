@@ -1,0 +1,20 @@
+<body style="background-color: sandybrown;">
+   
+
+<div class="container mt-0">
+    {{#each products}}
+ <div class="row pt-3" >
+
+      <div class="card" style="width: 300px;">
+        <img src="/product-images/{{this.item}}.png" class="card-img-top" alt="...">
+        <div class="card-body" style="">
+          <h5 class="card-title">Quantity:{{this.quantity}}</h5>
+          <p>{{this.product.price}}</p>
+          <button  onclick="cancelOrder('{{this._id}}','{{this.item}}')" class="btn btn-danger">Remove Item</button>
+        </div>
+      </div>
+
+    </div>
+    {{/each}}
+</div>
+</body>

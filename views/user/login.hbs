@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,42 +11,22 @@
 
 <div class="user-login">
     <h1>Login</h1>
-    <form action="/login" method="POST">
+    <h3 id="login-fail" style="display: none; color: red; background-color: royalblue;">Invalid email or password</h3>
+    <form id="login-form">
 <div class="">
   <label for="formGroupExampleInput" class="form-label" >Email</label>
-  <input type='email' name="email" class="form-control" id="formGroupExampleInput" placeholder="Email" required>
+  <input type='email' id="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Email" required>
 </div>
 <div class="">
   <label for="formGroupExampleInput2" class="form-label">Password</label>
-  <input type="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Password" required>
+  <input type="password" id="password" name="password" class="form-control" id="formGroupExampleInput2" placeholder="Password" required>
 </div>
 <button class="btn-user">Login</button>
 </form>
-<a href="/signupRq">Create new account?</a>
+<a href="/signup">Create new account?</a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 </body>
-</html>
+</html> 

@@ -9,30 +9,314 @@
 <nav class="navbar">
 
 
-  <div class="box">
-    <span class="span-navbar"><strong>MYNTRA</strong></span>
-    <input type="text" placeholder="Search...">
-  <span id="register"><a href="https://www.figma.com/file/7O6wJisVIzBvizb2do3qyW/Untitled">Register </a></span>
+  <div id="box">
+    <span class="span-navbar"><strong><a href="/">MYNTRA</a> </strong></span>
+    <input type="text" id="input" placeholder="Search..."> 
+    <i id="search-icon" class="fas fa-search"></i>
 
-  <span id="cart"><a href="https://www.youtube.com/watch?v=Hv0AiWFAiRg&t=381s"> Cart</a></span>
+<a href="/cartItem"><i id="cart" style="margin-bottom: 20px;" class="fas fa-shopping-cart cart-icon"><span class="badge bg-success p-0" id="cart-count">{{count}}</span></i></a>
 
-  <a href=""><img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ED2vW7yAzDNS7A-ZrleUQmQZTGHeMEy-uw&usqp=CAU"
-      id="cart-img" alt="hhhhh"></a>
+    
 
+
+
+
+{{!-- <span id="account">
+  {{#if users}}
+  {{users.fname}}
+  {{/if}}
+  </span> --}}
  
-
-  <button id="btn-logout">Logout</button>
-
+ 
+<div class="dropdown" style="position: absolute; right: 10%;top: 35px;">
+  
+  <button class="btn btn-warning dropdown-toggle btn-drop" type="button"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  {{#if users}}
+  {{users.fname}} {{users.lname}}
+  {{else}}
+  My account
+  {{/if}}
+  </button>
+  
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    {{#if users}}
+    <li><a class="dropdown-item" href="/logout">Logout</a></li>
+    {{else}}
+    <li><a class="dropdown-item" href="/login">Login</a></li>
+    {{/if}}
+    <li><a class="dropdown-item" href="#">About</a></li>
+  </ul>
+</div>
+ 
+{{#if users}}
+  <button class="btn btn-light" style="display: none;" id="btn-logout"><a href="/logout">Logout</a></button>
+  {{/if}}
 </nav>
 
+ 
+  <div class="full">
+  
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      
+  
+     <header>Myntra</header>
+  <ul>
+<li><a href="/"><i class="fas fa-calendar-week"></i>Home</a></li>
+<li><a href="/myaccount"><i class="fas fa-qrcode"></i>My account</a></li>
+<li><a href="/orederd"><i class="fas fa-link"></i>My orders</a></li>
+<li><a href="/cartItem"><i class="fas fa-stream"></i>Cart</a></li>
+<li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
+<li><a href="#"><i class="fas fa-sliders-h"></i>Contact</a></li>
+{{#if users}}
+<li><a href="/logout"><i class="far fa-envelope"></i>Logout</a></li>
+{{/if}}
+</ul>
+</div>
 
+</div>
 
+{{!-- <script src="/javascripts/index.js"></script> --}}
 </body>
 </html>
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login popup box</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+{{#if users}}
+{{else}}
+  <div class="login-popup">
+  	 <div class="box">
+  	 	 <div class="img-area">
+  	 	 	<div class="img">
+  	 	 	</div>
+  	 	 	
+  	 	 </div>
+  	 	 <div class="form">
+  	 	 	<div class="close">&times;</div>
+  	 	 	<h1>Please login</h1>
+  	 	 	{{!-- <form id="signup-form">
+  	 	 		<div class="form-group">
+  	 	 			<input type="text" placeholder="Email" name="email" class="form-control">
+  	 	 		</div>
+  	 	 		<div class="form-group">
+  	 	 			<input type="password" placeholder="Password" name="password" class="form-control">
+  	 	 		</div>
+  	 	 		<div class="form-group">
+  	 	 			<label><input type="checkbox">
+  	 	 				Remember Me
+  	 	 			</label>
+  	 	 		</div>
+  	 	 		<button type="button" class="btn">Log In</button>
+  	 	 	</form>--}}
+          <a href="/login" class="btn btn-primary">login</a>
+		  <p>or</p>
+		  <a href="/signup" class="btn btn-danger">Signup</a>
+  	 	 </div>
+  	 </div>
+  </div> -
+
+{{/if}}
+<script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  body{
+	font-family: sans-serif;
+	margin:0;
+	line-height: 1.5;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;
+}
+
+.login-popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1099;
+	background-color:rgba(0,0,0,0.6);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+.login-popup.show{
+	visibility:visible;
+	opacity: 1;
+}
+.login-popup .box{
+	background-color:#ffffff;
+	width: 750px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0;
+	margin-left: 50px;
+	transition: all 1s ease;
+
+}
+.login-popup.show .box{
+	opacity: 1;
+	margin-left: 0;
+}
+.login-popup .box .img-area{
+	flex:0 0 50%;
+	max-width: 50%;
+	position: relative;
+	overflow: hidden;
+	padding:30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-popup .box .img-area h1{
+	font-size: 30px;
+}
+.login-popup .box .img-area .img{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202101/myn_logo_1200x768.png?x2BtnX1OAVqpj2mqLPAdgOmU87clXrNs&size=770:433);
+	background-size: cover;
+	background-position: center;
+	animation: zoomInOut 7s linear infinite;
+	z-index: -1;
+
+}
+@keyframes zoomInOut{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+}
+.login-popup .box .form{
+	flex:0 0 50%;
+	max-width: 50%;
+	padding:40px 30px;
+}
+
+.login-popup .box .form h1{
+	color:#000000;
+	font-size: 30px;
+	margin:0 0 30px;
+}
+.login-popup .box .form .form-control{
+	height: 45px;
+	margin-bottom: 30px;
+	width: 100%;
+	border:none;
+	border-bottom:1px solid #cccccc;
+	font-size: 15px;
+	color:#000000;
+}
+.login-popup .box .form .form-control:focus{
+	outline: none;
+}
+.login-popup .box .form label{
+	font-size: 15px;
+	color:#555555;
+}
+.login-popup .box .form .btn{
+	width: 100%;
+	background-color: #E91E63;
+	margin-top:40px;
+	height: 45px;
+	border:none;
+	border-radius: 25px;
+	font-size: 15px;
+	text-transform: uppercase;
+	color:#ffffff;
+	cursor: pointer;
+}
+.login-popup .box .form .btn:focus{
+	outline: none;
+}
+
+.login-popup .box .form .close{
+	position: absolute;
+	right: 10px;
+	top:0px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+	.login-popup .box{
+		width: calc(100% - 30px);
+	}
+	.login-popup .box .img-area{
+		display: none;
+	}
+	.login-popup .box .form{
+		flex: 0 0 100%;
+        max-width: 100%;
+	}
+}
+</style>
+
+
+<script>
+  
+
+  const loginPopup = document.querySelector(".login-popup");
+  const close = document.querySelector(".close");
+
+
+  window.addEventListener("load",function(){
+ 
+   showPopup();
+   // setTimeout(function(){
+   //   loginPopup.classList.add("show");
+   // },5000)
+
+  })
+
+  function showPopup(){
+        const timeLimit = 5 // seconds;
+        let i=0;
+        const timer = setInterval(function(){
+         i++;
+         if(i == timeLimit){
+          clearInterval(timer);
+          loginPopup.classList.add("show");
+         } 
+         console.log(i)
+        },1000);
+  }
+
+
+  close.addEventListener("click",function(){
+    loginPopup.classList.remove("show");
+  })
+
+</script>
+
+  
 
 
 

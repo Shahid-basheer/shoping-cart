@@ -6,7 +6,7 @@
 
 
 <section class="containeradmin view-product">
-   <a href="admin/add-products" class="btn-primary pl-5">Add products</a> 
+   <a href="/admin/add-products" class="btn btn-primary pl-5 mt-5">Add products</a> 
 
 
 
@@ -20,19 +20,24 @@
       <th scope="col">Category</th>
       <th scope="col">Price</th>
       <th>images</th>
+      <th>Option</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody id="myOrderTable tr">
 
       {{#each products}}
     <tr>
          
-      <td scope="row">1</th>
+      <td scope="row">{{@index}}</th>
      
-      <td>{{this.Name}}</td>
-      <td>{{this.Category}}</td>
-      <td>{{this.Price}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.price}}</td>
       <td><img src="/product-images/{{this._id}}.png" style="width: 150px; height:100px" alt=""></td>
+      <td ><a href="/admin/edit-product/{{this._id}}" class="btn btn-primary">Edit</a>
+          <a href="/admin/delete-product/{{this._id}}" class="btn btn-danger"  onclick="return confirm('Are you conform delete? {{this.name}}')">Delete</a>
+      </td>
+
     </tr>
     {{/each}}
     

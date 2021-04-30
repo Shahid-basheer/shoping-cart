@@ -1,21 +1,21 @@
 <section style=" margin-left:20%; margin-top:210px; margin-right:20%">
-    <body style="background-image: url(https://thumbs.dreamstime.com/b/fashion-shopping-girl-portrait-beauty-woman-bags-mall-shopper-sales-center-180239725.jpg); background-size:80%;">
+    
         
 
 <h1>Add products</h1>
 <form action="/admin/add-product" method="POST" enctype="multipart/form-data">
   <div class="form-group add-product">
     <label>Name</label>
-    <input type="text" name="Name" class="form-control"  placeholder="Enter Name">
+    <input type="text" name="name" class="form-control"  placeholder="Enter Name">
     {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your item with anyone else.</small> --}}
   </div>
   <div class="form-group">
     <label >Category</label>
-    <input type="text" name="Category" class="form-control"placeholder="Category">
+    <input type="text" name="category" class="form-control"placeholder="Category">
   </div>
   <div class="form-group">
     <label >Price</label>
-    <input type="text" name="Price" class="form-control"  placeholder="Price">
+    <input type="text" name="price" class="form-control"  placeholder="Price">
   </div>
   <div class="form-group">
     <label >Images</label>
@@ -27,5 +27,5 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-    </body>
+    
 </section>
