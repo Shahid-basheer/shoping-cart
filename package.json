@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "./bin/www"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -43,3 +43,4 @@
   "homepage": "https://github.com/shahi77/My-new-project#readme",
   "description": ""
 }
+
