@@ -95,7 +95,7 @@ router.post('/login', function(req, res, next) {
       req.session.users=response.user
 
       twilo.verify.services(otp.serviceId).verifications.create({
-        to:`+${req.session.users.phone}`,
+        to:`+91${req.session.users.phone}`,
         channel:req.session.users.channel
       }).then((data)=>{
         console.log(data);
@@ -123,7 +123,7 @@ router.get('/verify',(req,res)=>{
 router.post('/verify-otp',(req,res)=>{
   console.log('***********888');
   twilo.verify.services(otp.serviceId).verificationChecks.create({
-      to:`+${req.session.users.phone}`,
+      to:`+91${req.session.users.phone}`,
       code:req.body.code
        })
        .then((data)=>{

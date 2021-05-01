@@ -27,5 +27,19 @@
     "twilio": "^3.57.0",
     "upto": "0.0.6",
     "uptodate": "^1.0.2"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahi77/My-new-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahi77/My-new-project/issues"
+  },
+  "homepage": "https://github.com/shahi77/My-new-project#readme",
+  "description": ""
 }
